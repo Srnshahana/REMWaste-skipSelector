@@ -1,12 +1,27 @@
-# React + Vite
+# REMWaste - Skip Selector
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based interactive UI for selecting skip sizes for waste collection. The interface is designed to be clean, visually engaging, and responsive across devices.
+It emphasizes important components through thoughtful layout, size  and content clarity. The design style, color palette, and typography closely reflect the aesthetics and brand identity of the original website, while improving visual focus and usability.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Animated skip selection cards with hover & entry effects
+- Smooth custom cursor follower
+- Dynamic stepper at the top
+- Sticky bottom bar that shows selection details
+- Fully responsive and mobile-friendly design
+- Integrated with Git version control
 
-## Expanding the ESLint configuration
+## 💡 Approach
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **UI Layout**: Built using React functional components and inline styling for simplicity.
+2. **Cards**: Each skip card includes dynamic images and animated interaction states.
+3. **State Handling**: `useState` + `useEffect` to manage selection and animations.
+4. **Cursor Animation**: Custom follower with easing for smooth tracking.
+5. **Bottom Bar**: Appears only after selection and is sticky for better UX.
+
+## 🔧 How to Run
+
+```bash
+npm install
+npm run dev

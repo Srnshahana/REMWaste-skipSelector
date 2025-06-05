@@ -161,7 +161,7 @@ const skipOptions = [
         style={{
           display: 'flex',
           flexWrap: 'wrap',
-          // justifyContent: 'center',
+          justifyContent: 'center',
           gap: '28px',
           maxWidth: '1200px',
           width: '100%',

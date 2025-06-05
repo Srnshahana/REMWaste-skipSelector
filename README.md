@@ -5,23 +5,14 @@ It emphasizes important components through thoughtful layout, size  and content 
 
 ## ✨ Features
 
-- Animated skip selection cards with hover & entry effects
-- Smooth custom cursor follower
-- Dynamic stepper at the top
-- Sticky bottom bar that shows selection details
-- Fully responsive and mobile-friendly design
-- Integrated with Git version control
 
-## 💡 Approach
+	-Animated skip selection cards with entry pop-up animation and smooth hover elevation
+	-Blue glow shadow around selected cards for enhanced visual effects
+	-Smooth custom cursor follower that tracks user movement 
+	-Dynamic stepper navigation indicating user progress through selection steps
+	-Sticky bottom bar that displays selected skip details only when applicable
+	-Fully responsive and mobile-friendly design layout
+	-UI elements are arranged with attention to detail, size hierarchy, and clarity
+	-Design maintains brand consistency in color palette, font style, and overall aesthetics
+	-Every essential detail from the original reference has been carefully considered and implemented without omission
 
-1. **UI Layout**: Built using React functional components and inline styling for simplicity.
-2. **Cards**: Each skip card includes dynamic images and animated interaction states.
-3. **State Handling**: `useState` + `useEffect` to manage selection and animations.
-4. **Cursor Animation**: Custom follower with easing for smooth tracking.
-5. **Bottom Bar**: Appears only after selection and is sticky for better UX.
-
-## 🔧 How to Run
-
-```bash
-npm install
-npm run dev

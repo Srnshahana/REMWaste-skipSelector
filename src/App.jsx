@@ -24,18 +24,18 @@ function App() {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [targetPos, setTargetPos] = useState({ x: 0, y: 0 });
 
-const skipOptions = [
-  { size: 4, hirePeriod: '14 day', price: 211, image: skipImage1 ,notAllowed:false},
-  { size: 5, hirePeriod: '14 day', price: 241, image: skipImage2 ,notAllowed:false},
-  { size: 6, hirePeriod: '14 day', price: 264, image: skipImage3 ,notAllowed:false},
-  { size: 8, hirePeriod: '14 day', price: 295, image: skipImage4 ,notAllowed:false},
-  { size: 10, hirePeriod: '14 day', price: 356, image: skipImage5 ,notAllowed:true},
-  { size: 12, hirePeriod: '14 day', price: 390, image: skipImage6 ,notAllowed:true},
-  { size: 14, hirePeriod: '14 day', price: 434, image: skipImage7 ,notAllowed:true},
-  { size: 16, hirePeriod: '7 day', price: 510, image: skipImage8 ,notAllowed:true},
-  { size: 20, hirePeriod: '14 day', price: 802, image: skipImage9 ,notAllowed:true},
-  { size: 40, hirePeriod: '14 day', price: 877, image: skipImage10 ,notAllowed:true},
-];
+  const skipOptions = [
+    { size: 4, hirePeriod: '14 day', price: 211, image: skipImage1, notAllowed: false },
+    { size: 5, hirePeriod: '14 day', price: 241, image: skipImage2, notAllowed: false },
+    { size: 6, hirePeriod: '14 day', price: 264, image: skipImage3, notAllowed: false },
+    { size: 8, hirePeriod: '14 day', price: 295, image: skipImage4, notAllowed: false },
+    { size: 10, hirePeriod: '14 day', price: 356, image: skipImage5, notAllowed: true },
+    { size: 12, hirePeriod: '14 day', price: 390, image: skipImage6, notAllowed: true },
+    { size: 14, hirePeriod: '14 day', price: 434, image: skipImage7, notAllowed: true },
+    { size: 16, hirePeriod: '7 day', price: 510, image: skipImage8, notAllowed: true },
+    { size: 20, hirePeriod: '14 day', price: 802, image: skipImage9, notAllowed: true },
+    { size: 40, hirePeriod: '14 day', price: 877, image: skipImage10, notAllowed: true },
+  ];
 
   const steps = [
     { icon: <FiMapPin />, label: 'Postcode', active: true },
@@ -160,6 +160,44 @@ const skipOptions = [
       <div
         style={{
           display: 'flex',
+          flexDirection: 'row',
+          overflowX: 'auto',
+          overflowY: 'hidden',
+          padding: '20px 10px 100px 10px',
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+          width: '100%',
+          boxSizing: 'border-box',
+        }}
+      >
+        {skipOptions.map((skip) => (
+          <div
+            key={skip.size}
+            style={{
+              flex: '0 0 auto',
+              scrollSnapAlign: 'start',
+              marginRight: '22px',
+              marginLeft: '22px',
+              width: 'min(90vw, 360px)',
+            }}
+          >
+            <SkipCard
+              {...skip}
+              selected={selectedSize === skip.size}
+              onSelect={() => {
+                setSelectedSize(skip.size);
+                window.scrollBy({
+                  top: 190,
+                  behavior: 'smooth',
+                });
+              }}
+            />
+          </div>
+        ))}
+      </div>
+      {/* <div
+        style={{
+          display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
           gap: '28px',
@@ -176,7 +214,7 @@ const skipOptions = [
             onSelect={() => setSelectedSize(skip.size)}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* Cursor Follower */}
       <div
